@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //預設帳號：abc,密碼：1234
+        let uid='aaa';
+        let upw='456';
+
+        //單層條件檢查
+        if(uid=='aaa'&& upw=='1234'){
+            console.log('帳密OK');
+        }
+        if(uid=='aaa'&& upw!='1234'){
+            console.log('密碼err');
+        }
+        if(uid!='aaa'&& upw=='1234'){
+            console.log('帳號err');
+        }
+        if(uid =='aaa'&& upw!='1234'){
+            console.log('帳密err');
+        }
+
+        //多層條件檢查,最後一項檢查條件可以省略
+        if(uid=='aaa'&& upw=='1234'){
+            console.log('帳密OK');
+        }else if(uid=='aaa'&& upw!='1234'){
+            console.log('密碼err');
+        }else if(uid!='aaa'&& upw=='1234'){
+            console.log('帳號err');
+        }else if(uid =='aaa'&& upw!='1234'){
+            console.log('帳密err');
+        }
+
+
+    </script>
+</body>
+</html>

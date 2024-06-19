@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    字串變數
+    <script>
+        let dogName="健仔";
+        console.log(`毛孩名字:${dogName}`);
+        let dogAge=7;
+        console.log(`毛孩年紀:${dogAge}歲`);
+        dogAge ="7";
+        //取得資料型態＝>typeof(變數名)
+        console.log(typeof(dogAge));
+        //未轉換
+        console.log(`毛孩5年後年齡:${dogAge+5}歲`);
+        //已轉換，運算需要將文字轉換成數值，才會被看作數字運作，但只是暫時轉換而已，這一串還是字串
+        console.log(`毛孩5年後年齡:${Number(dogAge)+5}歲`);
+        console.log(typeof(dogAge));
+        //真正要字串轉數值，必須重新指派轉換結果給原來的變數，下一行才是真正的轉換了，轉換數值需考量要暫時改變、還是永久改變成數值
+        dogAge=Number(dogAge);
+        console.log(`毛孩5年後年齡:${dogAge}歲`);
+        console.log(typeof(dogAge));
+
+        //浮點數＝>帶有小數點資料，舉例：試著運算圓的面積
+        let pi =3.14;
+        let r=6;
+        let area=pi*pi*r;
+        console.log(area);
+        console.log(parseInt (area)); //取整數（無條捨去到整數位）
+        console.log()
+        console.log(area.toFixed(2));//滑鼠移到字串上，浮現的小匡會顯示內容告訴你是數值或字串
+        console.log(Number(area.toFixed(2))+1);//若要運算，必須用Number()轉換
+    </script>
+
+    
+</body>
+</html>

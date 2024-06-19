@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>變數宣告</h2>
+    <script>
+// 變數宣告語法
+// 建立變數的三個語法
+// var 變數名稱(建立名稱，通常不會打ＸＹＺ等代號，會直接給一個縮小的名字，例如學號sNo\價錢price);
+// price 很少給預設值
+//var~允設同一個檔案中的變數重複宣告（一個不嚴謹的宣告）不建議重複，會浪費伺服器空間。但以前的人都習慣使用var的宣告
+//let~不允許（不可以同名不同人），若重複的話會出錯
+//const~一但建立無法更改數值～常數(常使用於稅金這種，固定的數值)
+
+let price;  //建立price變數
+price=100;  //給值
+let qty=5;  //建立qty變數的同時，給值
+
+//傳懂串接方式
+console.log('單價:'+price+'元');
+qty=10;
+console.log('數量:'+qty);
+console.log('小計:'+price*qty);
+
+// 字串字面值串接資料{頭尾加上反引號}
+//遇到變數或是運算式要加上＄{變數或運算式}
+
+console.log(`單價:${price}元`);
+console.log(`數量:${qty}`);
+console.log(`小計:${price*qty}元`);
+
+
+
+
+
+    </script>
+</body>
+</html>
