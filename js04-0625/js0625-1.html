@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //輸入[window.prompt()]星期別代號，顯示星期？
+        //馬上要用的情況，才可以在宣告變數後直接帶入
+        //if elseif 可以用區間，就是<>或＝，switch只能用單一數值
+        //prompt()=>回傳是一個字串型態的結果
+        let a = prompt('請輸入星期別代號:1-7');
+        //trim()=>去除內容前後多餘的空白，再往下檢查
+        //length=>資料的長度
+        console.log(a.length);
+        switch (a.trim()) {
+            case null://把取消放最上面，因為只要按取消後面就不用判斷了，這樣比較快
+            document.write('你按了取消');
+            break;
+            case''://沒有填寫任何內容，連空白都沒有（連續二下單引號或雙引號）
+            document.write('尚未填寫任何代號');
+            break;
+            case '1':
+                document.write('星期一');
+                break;//結束switch
+            case '2':
+                document.write('星期二');
+                break;//結束switch
+            case '3':
+                document.write('星期三');
+                break;//結束switch
+            case '4':
+                document.write('星期四');
+                break;//結束switch
+            case '5':
+                document.write('星期五');
+                break;//結束switch
+            case '6':
+                document.write('星期六');
+                break;//結束switch
+            case '7':
+                document.write('星期日');
+                break;//結束switch
+            default:
+                //以上條件都不成立
+                document.write('輸入err');
+                break;//switch的最後一個break可省略，但建議還是寫上以免後續移位忘了加
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

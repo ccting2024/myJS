@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //血型判斷（大小寫不同）
+        //A=>A型
+        //a=>A型
+        //轉換大小寫
+        // 變數名.toUpperCase();//轉大寫
+        // 變數名.toLowerCase();//轉小寫
+
+        //if-else-if
+
+        let a = prompt('請輸入血型');
+
+        if (a == null) {// 是否按了取消
+            document.write('按了取消');
+        } else {
+            //按了確定
+            //去除空白 
+            //轉大寫
+            a = a.trim().toUpperCase();
+
+            //檢查血型
+            if (a== '') {//去除空白後的結果是沒有內容的
+                document.write('你沒有輸入血型');
+            } else if (a == 'A') {
+                document.write('A型');
+            } else if (a == 'B') {
+                document.write('B型');
+            } else if (a == 'O' ) {
+                document.write('O型');
+            } else if (a == 'AB') {
+                document.write('AB型');
+            } else {
+                document.write('血型輸入錯誤')
+            }
+
+        }
+        //換行
+        document.write('<br>');
+        
+        //switch
+        let a2 = prompt('請輸入血型');
+        if (a2 == null) {// 是否按了取消
+            document.write('按了取消');
+        } else {
+            //按了正確
+            switch (a2.trim().toLowerCase()) {
+                case '':
+                    document.write('尚未填寫任何代號');
+                    break;
+                case 'a':
+                    document.write('A型');
+                    break;//結束switch
+                case 'b':
+                    document.write('B型');
+                    break;//結束switch
+                case  'o':
+                    document.write('O型');
+                    break;//結束switch
+                case 'ab':
+                    document.write('AB型');
+                    break;//結束switch
+                default:
+                    //以上條件都不成立
+                    document.write('血型輸入err');
+                    break;//switch的最後一個break可省略，但建議還是寫上以免後續移位忘了加
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // for(let i=1;i<=5;i=i+1){
+        //   console.log(i);
+
+        //}
+        // i++=> i=i+1
+        // i--=> i=i-1
+
+        for (let i = 1; i <= 5; i=i+1) {
+            document.write('*<br>');
+            // 上面是單行寫法、下面雙行
+            //document.write('*');
+            //document.write('<br>');
+
+        }
+
+        //1-10的合計
+        let s = 0;
+        let i; 
+        //若這裡宣告了，下面的i前面let就不用加
+        for ( i = 1; i <= 10; i++) {
+            s = s + i;//累計
+
+        }
+        //迴圈結束後，顯示s,i結果(s可以直接顯示，但i不行，因為他只能活在宣告他的大括號裡面，否要和s一樣，在外面宣告)
+        // console.log(`1+2+3+...+10=${s}`);
+        // console.log(`i=${i}`);
+
+        document.write(`1+2+3+...+10=${s}<br>`);
+        document.write(`i=${i}`);
+
+    </script>
+</body>
+
+</html>
