@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張婷＿0626_js作業1：猜數字</title>
+</head>
+
+<body>
+    <script>
+        // 內定一個數字結果 => let bingoNum = 99
+        // 彈出輸入視窗，輸入數字
+        // 最多能夠猜3次
+        // let val1 = prompt('猜數字遊戲，請輸入「1-99」的數值：');
+        // let val2 = prompt('請輸入「1-99」的數值：');
+        // let val3 = prompt('請輸入「1-99」的數值：');
+        // let ans = '30';
+
+        // if (val1==ans||val2==ans||val3==ans){document.write('恭喜答對！<br>')}
+
+        // document.write(`第一次猜測：${val1}<br>`);
+        // document.write(`第二次猜測：${val2}<br>`); 
+        // document.write(`第三次猜測：${val3}<br>`);
+
+
+        //我的練習
+        // let val1 = prompt('猜數字遊戲，請輸入「1-99」的數值：');
+        // let ans = '30';
+
+
+        // if (val1 == ans) {
+        //     document.write(`第一次猜測：${val1}<br>`);
+        //     document.write('恭喜答對！<br>')
+        // } else {
+        //     let val2 = prompt('請輸入「1-99」的數值：');
+        //     if (val2 == ans) {
+        //         document.write(`第一次猜測：${val1}<br>`);
+        //         document.write(`第二次猜測：${val2}<br>`);
+        //         document.write('恭喜答對！<br>')
+        //     } else {
+        //         let val3 = prompt('請輸入「1-99」的數值：');
+        //         if (val3 == ans) {
+        //             document.write(`第一次猜測：${val1}<br>`);
+        //             document.write(`第二次猜測：${val2}<br>`);
+        //             document.write(`第三次猜測：${val3}<br>`);
+        //             document.write('恭喜答對！<br>')
+        //         } else {                
+        //         document.write(`第一次猜測：${val1}<br>`);
+        //         document.write(`第二次猜測：${val2}<br>`);
+        //         document.write(`第三次猜測：${val3}<br>`);
+        //         document.write('挑戰失敗<br>') 
+        //     }
+        //     }
+        // }
+
+
+        //老師示範
+
+        let a = 'n';    //預設沒有答對
+        for (let i = 1; i <= 3; i++) {
+            let result = prompt('請輸入數字');
+            document.write(`第${val1}次:${result}<br>`);
+            //檢查
+            if (result == '99') {
+                document.write('答對了')
+                a = 'y';
+                break;
+            }
+
+        }
+        if (a == 'n') {
+
+            document.write('挑戰失敗')
+        }
+
+
+
+    </script>
+</body>
+
+</html>

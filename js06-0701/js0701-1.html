@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1-10合計
+        //合計變數
+        let s1 = 0;//需給初始值，若沒有初始值需給空字串，否會Nan
+        for (let i = 1; i <= 10; i++) {
+            s1 = si + i;
+            //查看每次加總的結果
+            //cnsole.log(`i=${i},s1=$"{s1}`)
+        }//最後加左的結果
+
+
+        //1-10合計--使用while
+        //while(進入迴圈條件){}不可災括號內定義
+        //+++先檢查再執行
+        //合計變數
+        //ˋˋ給一個變數宣告
+        let s2 = 0;
+        let i = 1;
+        while (i <= 10) {
+
+            s2 = s2 + i;
+            i++
+        }
+
+        document.write(`1+2+...+10=${s2}`)
+
+        //+++先執行再檢查
+        //第一次執行時不會檢查
+        //第二次開始前才檢查
+        //容易出錯的寫法
+        //合計變數
+        //ˋˋ給一個變數宣告
+        let s3 = 0;
+        let j = 1;
+        do {
+            s3 = s3 + j;
+            j++;
+        } while (i <= 10);
+        document.write(`1+2+...+10=${s3}`)
+    </script>
+</body>
+
+</html>

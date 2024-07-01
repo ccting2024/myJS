@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張婷＿0626_js作業2：巢狀迴圈</title>
+</head>
+<body>
+    <script>
+
+// *
+// **
+// ***
+// ****
+// *****
+
+//我的練習
+let str="*";
+for (let i = 1; i <= 5; i++) {
+    document.write("*".repeat(i) + '<br>');
+        }
+
+        document.write('<hr>');
+//老師示範
+        for(let i=1;i<=5;i++){
+            for(let j=1;j<=i;j++){
+                document.write('*');
+            }//for j
+            document.write('<br>');
+        }//for i
+
+
+//倒三角形的話，方法一
+document.write('<hr>');
+
+for(let i=5;i>=1;i--){
+            for(let j=1;j<=i;j++){
+                document.write('*');
+            }//for j
+            document.write('<br>');
+        }//for i
+
+        //撰寫迴圈避免無窮迴圈（無法結束的迴圈）
+
+//倒三角形的話，方法二
+document.write('<hr>');
+
+for(let i=1;i<=5;i++){
+            for(let j=5;j>=i;j--){
+                document.write('*');
+            }//for j
+            document.write('<br>');
+        }//for i
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //請顯示1-100中，5的倍數值並且加總，直到合計大於50就結束迴圈
+
+
+        //for 寫法
+
+        //我的練習
+
+        // for (let i=1;i<=100;i++)
+        //     if(i%5===0){
+        //         document.write(`五的倍數:${i},`);
+        //         num1=i+num1;
+        //         document.write(`以上數值加總=${num1}<br>`);
+        //         switch(num1>=50){
+        //             //break;
+        //         }
+        //     }
+        //老師示範
+
+        let tot=0;
+        for (let i=1;i<=100;i++){
+            if(i%5===0){
+                //tot=i+tot;縮寫如下行
+                tot+=i;
+                document.write(`五的倍數:${i},以上數值加總=${tot}<br>`);
+                if(tot>50){
+                    break;
+
+                }
+            }
+
+
+        }
+            
+
+
+        //while 寫法
+        document.write('<hr>')
+        tot=0;
+        let i=1;
+        while(i<=100){
+            if(i%5===0){
+                //tot=i+tot;縮寫如下行
+                tot+=i;
+                document.write(`i=${i},tot=${tot}`)
+                if(tot>50){
+                    break;
+                }
+            }
+            i++;
+        }
+        // let num=0;
+        // while(i%5===0){}
+
+
+
+    </script>
+</body>
+</html>
