@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+// 函式宣告
+
+    //狀況一：無參數、無傳回值
+
+        //建立一個打招呼的函式
+        function sayHi(){
+            //alert('Helllo'); 這個是彈出視窗
+            document.write('hello<br>');
+        }
+        //只有上面那個網頁不會顯現，須依靠下方的方式呼叫
+        //如何呼叫函式？ 函式名稱()
+        sayHi();
+
+
+    //狀況二：有參數、無傳回值
+
+        //參數只能存在函式裡面，若同時呼叫同名的參數和外面的變數，會叫到變數
+        //下面的做法是 把參數寫在函式裡面，然後在外面呼叫這個函式
+        //若沒有參數，也不會進行
+        
+        function sayHi2(strName){
+            document.write('Ｈi,'+strName+'早安<br>');
+        }
+
+        sayHi2('小明');
+        sayHi2('大王');
+        document.write('這位大名是...<br>');
+        sayHi2('阿方');
+
+        //彈出視窗，輸入稱呼
+        //inputName在外面宣告過了，所以可以呼叫
+        //
+        let inputName= prompt('請問怎麼稱呼');
+        sayHi2(inputName);
+        //()不是填寫strName! 
+        //這個數值需要是外面給的，得到後再回傳給函式
+    </script>
+</body>
+</html>

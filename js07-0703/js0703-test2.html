@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張婷-0703測驗</title>
+</head>
+
+<body>
+    <script>
+        //請輸入成績Ｎ次，直到輸入-1或取消就結束
+        /*
+        第一次分數：90
+        第二次分數：50
+        第三次分數：60
+        第四次分數：-1
+        -------------
+        及格人數：2人
+        不及格人數：1人
+            總分：200分(不含-1)
+        總平均：66.67分
+        */
+
+        //宣告及格＆不及格人數
+
+
+        let qua = 0//宣告及格人數
+        let uqua = 0//宣告不及格人數
+        let tot = 0//宣告總分
+        let ave =0//宣告總平均
+        let i = 0 // 宣告輸入次數
+
+
+        while(true){
+        
+        let input = Number(prompt('請輸入成績'));//需把輸入視窗也包進迴圈，才會重複運作
+        let score = Number(input.trim());//多給一個容器轉換刪除空白鍵，下面也要改成score
+        if (score == null ||score == '-1') {
+                    break;
+                }
+                if (isNaN(score) || score < 0 || score > 100) {//檢查是否有效
+                    alert('err');
+                    continue;
+                }
+                i++;
+                tot += score;
+                if (score >= 60) {
+                    qua = qua + 1
+                }
+                else {
+                    uqua = uqua + 1
+                }
+                document.write(`第${i}次分數：` + score+'<br>');
+            }
+            //針對輸入內容給一個迴圈
+            if(i>0){
+            ave=tot/i;
+            
+            document.write(`及格人數：` + qua+'位<br>');
+            document.write(`不及格人數：` + uqua+'位<br>');
+            document.write(`總平均` + ave+'分<br>');
+            }else {
+        document.write(`未輸入任何有效成績`);
+    }
+            
+        
+
+    </script>
+</body>
+
+</html>

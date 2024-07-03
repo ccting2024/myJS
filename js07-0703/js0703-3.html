@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>-
+    <script>
+        //狀況三：有參數、有傳回值
+        function chkScore(intNum) {
+            if (intNum >= 60) {
+
+                return '及格';
+            } else {
+                return '不及格';
+            }//結束函式，並把結果回傳
+        }
+
+        //分數1
+        let score = Number(prompt('請輸入分數'));
+        let result = chkScore(score);//呼叫函式，並得到函式執行後的結果
+        document.write('分數一' + result);//寫下來
+
+        //分數1
+        let score2 = Number(prompt('請輸入分數'));
+        let result2 = chkScore(score);//呼叫函式，並得到函式執行後的結果
+        document.write('分數一' + result2);//寫下來
+
+
+    </script>
+
+
+</body>
+
+</html>

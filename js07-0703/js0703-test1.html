@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //請設計一個函式，能夠四則運算
+        function calc(a,b,c){
+            //處理四則運算的結果
+            if(c=='+'){
+                //5+3=8
+                document.write(`${a}+${b}=${a+b}`)
+            }else if(c=='-'){
+                document.write(`${a}-${b}=${a-b}`)
+            }
+            else if(c=='*'){
+                document.write(`${a}*${b}=${a*b}`)
+            }
+            else if(c=='/'){
+                document.write(`${a}/${b}=${a/b}可能除不盡<br>`)
+                document.write(`${a}/${b}=${(a/b).toFixed(2)}`)
+                //＊＊老師補充！相除之後取到小數點第二位，必加()，讓()的內容先做運算
+            }else{
+                //＊＊老師補充！
+                document.write('運算符號不存在');
+
+            }
+        }
+        //＊＊老師補充！字串轉數值＝>Number()
+        //‘＋’比較特別有時是兩物相加，功能較多，故字串需要先轉成數值
+        // let val1= Number(prompt('請輸入第一個數值'));
+        // let val2= Number(prompt('請輸入第二個數值'));
+
+
+//延伸補充，練習處理排除下列狀況
+//1.非數字=> isNaN()
+//2.多餘空白=> trim()
+//3.取消狀況=>null
+
+document.write('我的練習<br>');
+        // let val1= prompt('請輸入第一個數值');
+
+        // switch (val1.trim()) {
+        //     case null://把取消放最上面，因為只要按取消後面就不用判斷了，這樣比較快
+        //     document.write('你按了取消');
+        //     break;
+        //     case''://沒有填寫任何內容，連空白都沒有（連續二下單引號或雙引號）
+        //     document.write('尚未填寫');
+        //     break;
+        //     case isNaN():
+        //     document.write('非數字');
+        // }
+        // let val2= prompt('請輸入第二個數值');
+
+        // switch (val1.trim()) {
+        //     case null://把取消放最上面，因為只要按取消後面就不用判斷了，這樣比較快
+        //     document.write('你按了取消');
+        //     break;
+        //     case''://沒有填寫任何內容，連空白都沒有（連續二下單引號或雙引號）
+        //     document.write('尚未填寫');
+        //     break;
+        //     case isNaN():
+        //     document.write('非數字');
+        // }
+document.write('老師示範<br>');
+
+        let val1= prompt('請輸入第一個數值');
+        let val2= prompt('請輸入第二個數值');
+        let oper= prompt('請輸入要的運算符號之一(+_*/)');
+        
+        // ||是’或‘的意思，下面的狀況是：只要其中發生一次就會顯現“你按了取消‘
+        if(val1==null||val2==null||oper==null){
+            document.write('你按了取消');
+        //isNaN=> is Not a Number
+        } else if(isNaN(val1)||isNaN(val2)){
+            document.write('非數字');
+        }else{
+        //去除多餘的空白＝>字串.trim()
+            val1= Number(val1.trim());
+            val2= Number(val2.trim());
+
+            calc(val1,val2,oper);
+        }
+        //變數跟參數名字可以宣告相同，但很容易搞混角色，調整也容易做錯。
+
+    </script>
+
+
+</body>
+</html>

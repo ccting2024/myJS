@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1-100中5的倍數合
+        //使用ｃｏｎｔｉｎｕｅ（忽略下方程式執行）
+        //當程式執行過程中遇到ｃｏｎｔｉｎｕｅ，它之後的程式碼都不執行，直接回到迴圈起始位置繼續迴圈
+
+        //1-100中5的倍數合
+        document.write(`for的寫法<br>`);
+        let tot = 0;
+        let i=0;
+        for (let i = 1; i <= 100; i++) {
+            if (i % 5 != 0) {
+                continue;
+            }
+            tot = tot + i;
+        }
+        document.write(`1-100中5的倍數合=${tot}<br>`);
+
+        //while
+        document.write(`while的寫法<br>`);
+        tot=0;//若要共用變數，上面已經改變（非0，現在要重新定義
+        i=1;
+
+        while (i <= 100) {
+            i++;
+            if (i % 5=== 0) {
+                tot += i;
+            }
+        }
+        document.write(`tot=${tot}`)
+
+//while+continus
+document.write(`while的寫法二<br>`);
+        tot=0;//若要共用變數，上面已經改變（非0，現在要重新定義
+        i=1;
+
+        while (i <= 100) {
+            i++;
+            if (i % 5!= 0) {
+                continue;
+            }
+            tot += i;
+        }
+        document.write(`tot=${tot}`)
+
+        //do while+continus
+document.write(`do while的寫法<br>`);
+        tot=0;//若要共用變數，上面已經改變（非0，現在要重新定義
+        i=1;
+
+        do{
+            i++;
+        if(i % 5!= 0) {
+                continue;
+            }
+            tot += i;
+
+        
+        }while (i<=100);
+        
+        document.write(`tot=${tot}`)
+
+
+
+
+        //結論
+        //break =>結束迴圈
+        //continue =>回到迴圈開始的位置
+    </script>
+
+
+
+</body>
+
+</html>
