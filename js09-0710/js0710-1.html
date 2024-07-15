@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //建立陣列方法1
+        let arr1=[1,2,3,4,5];
+        console.log(`arr1:${arr1}`);
+        //建立陣列方法2：現建立陣列物件，再給值
+        let arr2=new Array();
+        console.log(`arr2:${arr2}`);
+        console.log(`arr2.length:${arr2.lingth}`);
+        //給值，不用再用let宣告
+        //*通常建議陣列的值要同性質，但ＪＳ較不嚴謹 所以還是會出現
+        arr2[0]='a';
+        arr2[1]=100;
+        console.log(`arr2:${arr2}`);
+        console.log(`arr2.length:${arr2.lingth}`);        
+        //建立陣列方法3：先建立陣列物件，同時給值
+        let arr3=new Array(99,80,'abc',true,null,{x:1,y:3});//object為物件
+        console.log(`arr3:${arr3}`);
+        console.log(`arr3.length:${arr3.lingth}`);
+
+        //合法的陣列宣告
+        let arr4=[];//空陣列：先設定陣列，之後再加上值
+        let arr5=[1,2,3];
+        let arr6=['a','b','c'];
+        let arr7=[1,'2',ture,[],{book:'javascript'}];//混搭～這些方式都是可以的
+        //物件
+        let obj1={
+            x:5,
+            y:3
+
+        }
+
+        //查看陣列型態＝> typeof 陣列名稱
+        console.log(typeof(123));//數值nunber
+        console.log(typeof('123'));//字串string
+        console.log(typeof(arr5));//陣列本身就是一種物件 object
+        console.log(typeof(obj1));//陣列為物件 object
+        console.log(typeof(obj1.x));//陣列中的x是一個數值（5)，故顯示為數值number
+
+        //第一點！！重點！！陣列是從0開始算，所以arr1 他是0~4，共5個，所以第五個不存在
+        
+        console.log(typeof(arr1[5]));//若要顯示不存在，會顯示unflind
+
+
+    </script>
+        
+</body>
+</html>

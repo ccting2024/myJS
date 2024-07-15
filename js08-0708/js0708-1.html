@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="tot3(5,3)"></button>
+    <button onclick="console.log(tot2(5,3));">二數相加2</button>
+    <Script>
+        //二數相加
+        function tot1(n1,n2){
+            return n1+n2;
+        }
+        console.log(tot1(5,3));
+
+        //匿名函式
+        //將函式名稱改成變數名聲
+        let tot2=function(n1,n2){
+            return n1+n2;
+        }
+        console.log(tot2(5,3));
+        //匿名函式-2
+        let tot3=function(n1,n2){
+            console.log(n1+n2);
+        }
+    
+        //箭頭函式（參數寫在箭頭與函式之間）
+        let tot4=(n1,n2) =>{
+
+            return n1+n2;
+        }
+        console.log('tot4=>'+tot4(5,3));
+
+        //只要是函式，無論是否有參數，小括號（ ）都不能省略
+
+        let sayHi=()=>{
+            document.wrie("Hi");
+        }
+        sayHi();
+    </Script>
+</body>
+</html>

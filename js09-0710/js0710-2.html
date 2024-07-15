@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let arr1=[100,30,99,10,3];
+        console.log('排序前:'+arr1);
+
+        //遞增排序
+        // （這個做法不會按照數值大小，只會先從第一個字比對）
+        //arr1.sort();
+        //console.log('排序後:'+arr1);
+
+        //使用帶有參數的排序sort，前提是來源未排序
+        //設定兩個參數做比較
+        arr1.sort((a,b)=>{
+            return a-b;//遞增，這裡是 a ~ b 的意思
+        });
+        console.log('遞增排序後：'+arr1);
+
+        //下面兩個方法都可以遞減，不過前提是尚未排序
+
+        console.log('方法一');
+        // arr1.sort((a,b)=>{
+        //     return b-a;//遞減，這裡是 b ~ a 的意思
+        // });
+        // console.log('遞減排序後：'+arr1);
+
+        console.log('方法二');  //反轉 
+        arr1.reverse();
+        console.log('遞減排序後：'+arr1);
+
+
+    </Script>
+</body>
+</html>

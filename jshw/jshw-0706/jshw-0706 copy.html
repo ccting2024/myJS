@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14張婷--0706JS作業</title>
+</head>
+
+<body>
+    <script>
+        // 猜數字：直到猜對才結束
+        // 用亂數產生一個值：60
+        // 輸入資訊顯示console.log()
+        // 第1次：50 => 太小了（提示：50-100）
+        // 第2次：90 => 太大了（提示：50-90）
+        // 第3次：80 => 太大了（提示：50-80）
+        // 第4次：55 => 太小了（提示：55-80）
+        // 第5次：60 => 猜對了
+
+        // console.log(Math.floor(Math.random()*100)); // 回傳 0 ~ 99
+        // console.log(Math.floor(Math.random()*100)+1); // 回傳 1 ~ 100
+        // 產生亂數給變數bingoNum
+        // let bingoNum = Math.floor(Math.random() * 100) + 1;
+        // console.log(bingoNum);
+        //http://127.0.0.1:5500/jshw/jshw-0706/jshw-0707.html
+
+        let count = 0;//輸入次數
+        let ans = ''//宣告輸入的答案
+        let bAns = '100'//宣告輸入的錯誤大答案
+        let sAns = '1'//宣告輸入的錯誤小答案
+        let bingoNum = Math.floor(Math.random() * 100) + 1;// 產生亂數給變數bingoNum
+
+
+        function playGame(){
+            let bingoNum= math.floor(Math.random()*100)+1;
+            alert(bingoNum);
+        
+
+        while (true) {
+            let ans = prompt('猜數字：直到猜對才結束');
+            if (isNaN(ans) || ans == null) {//不知道為什麼取消沒有用？＠＠
+                alert('請重新作答');
+                continue;//重新回到迴圈繼續開始
+            }
+            ans = Number(ans)
+
+            if (ans < '1' || ans > '100') {
+
+                alert('請輸入1-100的數字');
+                continue;//重新回到迴圈繼續開始
+            }
+            if (ans % 1 != 0) {
+                alert('請輸入整數');
+                continue;//重新回到迴圈繼續開始
+            }
+            count++;
+            //回答正確
+            if (ans == bingoNum) {
+                console.log(`第${count}次:${ans}=>猜對了`)
+                break;
+            }
+            //回答錯誤
+            if (ans != bingoNum) {
+                if (ans > bingoNum) {//回答太大了
+                    let tmp = ans//回答暫時給tmp
+                    ans = bAns//答案給bAns
+                    bAns = tmp
+                    console.log(`第${count}次:${tmp}=> 太大了（提示：${sAns}-${bAns}）`)
+                } else {//回答太小了
+                    let tmp = ans//回答暫時給tmp
+                    ans = sAns//答案給sAns
+                    sAns = tmp
+                    console.log(`第${count}次:${tmp}=> 太小了（提示：${sAns}-${bAns}）`)
+                }
+                continue;
+            }
+        }
+    }
+
+
+    </script>
+</body>
+
+</html>

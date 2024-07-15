@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                //預設參數
+        //因為參數的預設值為undefined(空值)
+//所以設定函式時，給予預設參數（避免空值發生）
+            function tot1(n1=0,n2=0){
+            console.log(n1+n2);
+        }
+        tot1();//若沒有設定預設n1=0,n2=0，這行會得到NaN
+        tot1(5);//同上
+        tot1(0,3);//得3
+        tot1(5,3,2);//2被忽略，得到8
+
+        //具名參數（不按照參數的順序給值）
+        //使用物件型別{}傳送資料給指定的參數
+        //所以接收資料的函式參數，也要使用物件型別{}接收
+        //屬性、方法
+        function tot2(n1=0,n2=0){
+            console.log(n1+n2);
+        }
+        tot2({n2:3,n1:5});//名稱須完全一樣
+
+    </script>
+</body>
+</html>
