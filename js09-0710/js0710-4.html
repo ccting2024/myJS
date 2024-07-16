@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        //do-while
-        console.log('---do-while---');
-        count=0;
-        
+        //陣列就像變數一樣，也是一個容器，但變數只能放一個。但每個變數都分別命名、管理會太花力氣。所以在程式語言裡面，可以把不同的內容，相同的名稱同時儲存起來就是陣列
+        //使用時機：用一個陣列就可以管理一個班學生的資料
 
-    
+
+        //陣列中找出超過100以上
+        let arr1 = [1, 3, 7, 100, 234];
+        //for
+        console.log('----for----');
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] >= 100) {
+                console.log(arr1[i]);
+            }
+
+        }
+        //while 先檢查，再執行
+        console.log('----while----');
+        let count = 0;
+        while (count < arr1.length) {
+            if (arr1[count] >= 100) {
+                console.log(arr1[count]);
+            }
+            count++;
+        }
+        //do-while 先執行，再檢查
+        console.log('----do while----');
+        count = 0;
+        do{
+            if (arr1[count] >= 100) {
+                console.log(arr1[count]);
+            }
+            count++;
+        }
+        while (count < arr1.length);
+
+        //filter()
+        console.log('----filter()----');
+        let greatThan100= arr1.filter((n)=>{
+            if(n>=100){
+                return true
+            }
+        });
+
+        
+        //簡化
+        //let greatThan100= arr1.filter((n)=>n>=100);
+        console.log(greatThan100);
+
+
 
 
     </script>
 </body>
+
 </html>

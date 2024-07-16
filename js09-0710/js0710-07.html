@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //顯示陣列中資料的字串的值
+        //typeof()=>檢查資料型別=>字串型別=>string
+        let arr = [1, 2, 3, 4, 5, '12345'];
+        //for
+        console.log('--for--')
+        for (let i = 0; i < arr.length; i++) {
+            if (typeof (arr[1]) === "string") {
+                console.log(arr[i]);
+            }
+        };
+         //for of
+         console.log('--for of --');
+        //for(let 變數名稱 of 陣列名稱)這個會自己跑每一個值，直到沒有資料才結束，不用設定次數或條件
+        for(let n of arr){
+            if (typeof (arr[1]) === "string") {
+                console.log(n);
+            }
+        };
+
+        //for each
+        console.log('--for each --');
+        arr.forEach((n)=>{
+            if (typeof (arr[1]) === "string") {
+            console.log(n);
+            }
+        });
+                //map
+                console.log('---map---');
+        let arrMapAllData= arr.map((n)=>{
+            if (typeof (arr[1]) === "string") {
+                console.log(n);
+            }
+        });
+        console.log(arrMapAllData);
+
+
+    </script>
+</body>
+
+</html>

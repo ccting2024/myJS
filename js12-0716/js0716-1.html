@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //建立
+
+        
+        let arrNum = [];
+        //for 寫法
+
+                // //取出第一區：6個號碼（1-49)
+                // for (let i = 1; i <= 6; i++) {
+                //     //取亂數
+                //     let lotNum = Math.floor(Math.random() * 49) + 1;
+                //     //檢查陣列是否存在此號碼
+                //     if(arrNum.indexOf(lotNum)==-1){
+                //         //沒有重複，則加入陣列
+                //         arrNum.push(lotNum);
+                //     }else{
+                //         //有重複
+                //         console.log(`在編號${i}位置，${lotNum}重複了`);
+                //         i=i-1//因為重複，所以編號位置要-1
+
+                //     }
+                    
+                //     console.log(`樂透號碼${i}:` + lotNum);
+                // }
+                
+
+
+
+
+        //while 寫法
+
+            let i=0;
+            while (i<6){
+                //取亂數
+                let lotNum=Math.floor(Math.random()*49)+1;
+                //檢查陣列是否存在此號碼
+                if(arrNum.indexOf(lotNum)== -1){
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+        console.log(arrNum);
+
+        console.log('樂透號碼(排序前):' + arrNum);
+        arrNum.sort((a, b) => {
+            return a - b;//遞增，這裡是 a ~ b 的意思
+        });
+        console.log('樂透號碼(排序後)：' + arrNum);
+        let r1 = Math.floor(Math.random() * 49) + 1;
+        console.log('特別號碼:' + r1);
+    </script>
+</body>
+</html>

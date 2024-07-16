@@ -34,11 +34,13 @@
             bigLot.push(num)
             
         }
-        console.log('樂透號碼(排序前):' + bigLot);
+
+
+        console.log('樂透號碼(排序前):' + arrNum);
         bigLot.sort((a, b) => {
             return a - b;//遞增，這裡是 a ~ b 的意思
         });
-        console.log('樂透號碼(排序後)：' + bigLot);
+        console.log('樂透號碼(排序後)：' + arrNum);
         let r1 = Math.floor(Math.random() * 49) + 1;
         console.log('特別號碼:' + r1);
 

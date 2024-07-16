@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //建立函式：取亂數
+        
+
+
+
+        let bigLot = [];
+        let weiLi = [];
+        let fivLot=[];
+
+        //大樂透 用for寫法
+                    
+        function getLotNum(){
+
+                for (let i = 1; i <= 6; i++) {
+                        let lotNum = Math.floor(Math.random() * 49) + 1;
+                        if(bigLot.indexOf(lotNum)==-1){
+                            bigLot.push(lotNum);
+                        }else{
+                            console.log(`在編號${i}位置，${lotNum}重複了`);
+                            i=i-1
+                        }
+                        
+                    }
+                    bigLot.sort((a, b) => {
+                        return a - b;//遞增，這裡是 a ~ b 的意思
+                    });
+                    console.log('大樂透號碼(排序後)：' + bigLot);
+                    let r1 = Math.floor(Math.random() * 49) + 1;
+                    console.log('大樂透特別號碼:' + r1);
+
+        }
+
+
+        //威力彩 用while 寫法
+
+        function getLotNum2(){
+                        let i=0;
+                        while (i<6){
+                            //取亂數
+                            let arrWei=Math.floor(Math.random()*38)+1;
+                            //檢查陣列是否存在此號碼
+                            if(weiLi.indexOf(arrWei)== -1){
+                                weiLi.push(arrWei);
+                                i++;
+                            }
+                        }
+                    console.log(weiLi);
+                    weiLi.sort((a, b) => {
+                        return a - b;//遞增，這裡是 a ~ b 的意思
+                    });
+                    console.log('威力彩號碼(排序後)：' + weiLi);
+                    let r2 = Math.floor(Math.random() * 8) + 1;
+                    console.log('威力彩第二區 :' + r2);
+                }
+        //今彩539 用do-while 寫法
+
+        function getLotNum3(){
+                    let k=0;
+                        do{ 
+                            let arrFive =Math.floor(Math.random()*39)+1;
+                        
+                        if(fivLot.indexOf(arrFive)==-1){
+
+                            fivLot.push(arrFive);
+                            k++
+                        }
+                    }while(k<5);
+                
+                    fivLot.sort((a, b) => {
+                        return a - b;//遞增，這裡是 a ~ b 的意思
+                    });
+                    console.log('今彩539號碼(排序後)：' + fivLot);   
+                }
+
+
+        //  跳脫字元符號 \n換行
+    let lotGameNo = prompt('請輸入樂透號碼代號＝>\n1.大樂透 2.威力彩 3.今彩539');
+        switch(lotGameNo){
+            case'1':
+                getLotNum();
+                break;
+            case'2':
+                getLotNum2();
+                break;
+            case'3':
+                getLotNum3();
+                break;
+            default:
+                console.log('err! 代號輸入錯誤')
+                break;
+        };
+
+
+    </script>
+</body>
+</html>

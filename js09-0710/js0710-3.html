@@ -10,39 +10,53 @@
 <body>
     <script>
 
-        function showArr(arrData){
+        function showArr(arrData) {
             console.log(arrData);
         }
-
-        let arr1 = [1, 3, 7, 100, 234];
         //只顯示奇數
+        let arr1 = [1, 3, 7, 100, 234];
         for (let i = 0; i < arr1.length; i++) {
             if (arr1[i] % 2 == 1) {
-               // console.log(arr1[i]);
-               showArr(arr1[i]);
+                // console.log(arr1[i]);
+                showArr(arr1[i]);
             }
         }
+        console.log(`arr1:${arr1}`);
 
-        //  陣列中只保留奇數(匿名的箭頭函式，沒有命名的會馬上被執行。而有命名的 需要被呼叫才會執行)
-        console.log(arr1);
-        let odds = arr1.filter((n) => {
-            //檢查是否為奇數
-                // if (n % 2 == 1) {
-                //     return true;
-                // }
-                // return false;
+        //方法二
+        //  陣列中只保留奇數＝>filter(匿名的箭頭函式，沒有命名的會馬上被執行。而有命名的 需要被呼叫才會執行)
+        let arr2 = [1, 3, 7, 100, 234];
+        console.log(arr2);
 
-            //簡化寫法
-                return n % 2==1;
-        });
+        //CallBackFn=>匿名函式
+        // let odds = arr2.filter((n) => {
+        //檢查是否為奇數
+        // if (n % 2 == 1) {
+        //     return true;
+        // }
+        //     // return false;
+        //             //簡化寫法
+        //             return n % 2 == 1;
+        // });
+
+        // //CallBackFn=>箭頭函式
+        // let odds=arr2.filter((n)=>{
+        //     if(n%2 ==1){
+        //         return true;
+        //     }
+        //     return false;
+        // });
+        //再簡化 
+        let odds = arr2.filter((n) => n % 2 == 1);
 
         console.log('篩選後的陣列奇數內容：');
         console.log(odds);
         console.log('odds資料型別:');
-        console.log(typeof(odds));//顯示為object 陣列等於物件
+        console.log(typeof (odds));//顯示為object 陣列等於物件
         console.log('篩選後原陣列內容:');
         console.log(arr1);
-</script>
+        //氣泡排序法～泡泡很輕，輕的數字放前面，所以多用於遞增排序
+    </script>
 </body>
 
 </html>
