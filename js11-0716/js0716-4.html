@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //建立函式：取亂數（為了可通用，所以傳參數來接收亂數最大值）
+
+        function getRandNum(max) {
+            return Math.floor(Math.random() * max) + 1;
+        }
+        //item=樂透代號
+        //count=第一區的號碼次數
+        //no1=第一區的最大值
+        //no2=第二區的最大值
+        function getLotNum(item, count, no1, no2 = 0) {
+
+            let arrNum = [];
+            let i = 0;
+            while (i < count) {
+                //取亂數
+                let lotNum = getRandNum(no1);
+                //檢查陣列是否存在此號碼
+                if (arrNum.indexOf(lotNum) == -1) {
+                    arrNum.push(lotNum);
+                    i++;
+                }
+            }
+            console.log(arrNum);
+            arrNum.sort((a, b) => {
+                return a - b;//遞增，這裡是 a ~ b 的意思
+            });
+            console.log('大樂透號碼(排序後)：' + arrNum);
+
+            //第二區
+            if(item=='1'||item=='2'){
+
+           
+            let speNum = getRandNum(no2);
+            console.log('第二區 :' + speNum);
+        }
+        }
+
+    
+
+        //  跳脫字元符號 \n換行
+        let lotGameNo = prompt('請輸入樂透號碼代號＝>\n1.大樂透 2.威力彩 3.今彩539');
+        // switch (lotGameNo) {
+        //     case '1':
+        //         getLotNum('1',6,49,49);
+        //         break;
+        //     case '2':
+        //         getLotNum2('2',6,38,8);
+        //         break;
+        //     case '3':
+        //         getLotNum3('3',5,39);
+        //         break;
+        //     default:
+        //         console.log('err! 代號輸入錯誤')
+        //         break;
+        // };
+
+        //簡化
+        if (lotGameNo == '1') {
+            getLotNum('1', 6, 49, 49);
+        } else if (lotGameNo == '2') {
+            getLotNum('2', 6, 38, 8);
+        } else if (lotGameNo == '3') {
+            getLotNum('3', 5, 39);
+        } else {
+            console.log('err! 代號輸入錯誤')
+        }
+
+
+    </script>
+</body>
+
+</html>

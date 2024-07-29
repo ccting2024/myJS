@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //建立物件樣板
+        //function 後面＋字首大寫為物件;+字首小寫為函式
+        //1.建立物件樣板成員(像是figma的元件)
+        function Sdata1() {
+            this.sid = 's001';
+            this.sName = '王小明';
+            this.html = 100;
+            this.css = 100;
+            this.javascript = 100;
+            console.log(`${this.sid}號${this.sName}同學，成績總分為${this.html + this.css + this.javascript}分`);
+        }
+
+
+        function Sdata(no,name,htmlScore,cssScore,jsScore,...other) {
+            this.sid = no;
+            this.sName = name;
+            this.html = htmlScore;
+            this.css = cssScore;
+            this.javascript =jsScore;
+            this.showData=function(){//加了這段變成 下方有呼叫才會顯現
+            console.log(`${this.sid}號${this.sName}同學，成績總分為${this.html + this.css + this.javascript}分`);
+            console.log(`身高:${other[0]},體重:${other[1]}`)
+            }
+        }
+
+        //2.使用物件樣板
+        //傳給物件樣板的參數
+        let s1= new Sdata('s001','王小明',100,100,100,157,50);
+        s1.showData();
+        let s2= new Sdata('s002','張三',99,99,99,'',60);
+        s2.showData();
+        let s3= new Sdata('s003','李四',98,98,98,'沒有身高');
+        s3.showData();
+        //計算全班各科總分
+        //方法一：直接使用s1,s2,3的成員
+        console.log('html班級總成績:'+(s1.html+s2.html+s3.html));
+        console.log('css班級總成績:'+(s1.css+s2.css+s3.css));
+        console.log('js班級總成績:'+(s1.javascript+s2.javascript+s3.javascript));
+        
+        //方法二：陣列物件
+        //宣告陣列
+        let arrObj=[s1,s2,s3];
+
+        let totHtml=0,totCss=0,totJs=0;
+
+        for(let i=0;i<arrObj.length;i++){
+            totHtml=totHtml+arrObj[i].html;
+            totcss=totcss+arrObj[i].css;
+            totJs+= arrObj[i].javascript;//這行為上方的縮寫寫法
+        }
+
+        console.log('html班級總成績:' +totHtml);
+        console.log('css班級總成績:' +totcss);
+        console.log('JS班級總成績:' +totJs);
+
+    </script>
+</body>
+
+</html>
