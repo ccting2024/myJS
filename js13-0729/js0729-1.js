@@ -6,6 +6,7 @@ console.log(typeof myjs);
 console.log(myjs.textContent);
 console.log(document.querySelector('#js').textContent);
 
+// 核取方塊可以以多重選取
 
 //根據html標籤
 let myLi=document.getElementsByTagName('li');
