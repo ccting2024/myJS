@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>變更下拉式清單中的項目時，開啟網頁    </h2>
+    <form action="">
+        <label for="URL">選擇網站</label>
+        <select name="" id="URL">
+            <option value="">GOOGLE</option>
+            <option value="https://www.ikea.com.tw/zh">IKEA</option>
+            <option value="https://www.camacafe.com/">CAMA</option>
+        </select>
+    </form>
+
+    <script>
+        //取得下拉方塊
+        let url=document.getElementById('URL');
+        //監聽cnange 事件
+        url.addEventListener('change',function(){
+            //取得下拉選單中的值
+            //跳轉到指定的網址
+            location.href=url.value;
+        });
+
+    </script>
+</body>
+</html>

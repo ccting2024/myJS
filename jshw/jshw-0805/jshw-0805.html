@@ -72,7 +72,10 @@
         for (i = 0; i < close.length; i++) {
             close[i].onclick = function () {
                 var div = this.parentElement;
-                div.style.display = "none";
+               // div.style.display = "none";
+               div.style.color='red';
+                //刪除線
+            div.style.textDeecoration='line-through';
             }
         }
         //刪除第一個li
@@ -117,6 +120,7 @@
             span.className="close";
             span.appendChild(txt);
             li.appendChild(span);
+            
              // 為新增加的 close 按鈕添加刪除功能
             span.onclick = function () {
                     var div = this.parentElement;

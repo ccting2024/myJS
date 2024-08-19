@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 1200px;
+            margin-left: auto;/* 控制自己置中：若沒這兩行，會靠左 */
+            margin-right: auto;
+            text-align: center;/* 控制子元素marquee置中 */
+        }
+        marquee{
+            background-color: cadetblue;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <!-- 跑馬燈文字效果 -->
+    <!-- behavior為捲動方式‘、預設為：scroll、左右來回：alternate、指移動一次：slide、scrollamount＝移動速度 -->
+   <marquee behavior="" scrollamount="10" onmouseover="stop();" onmouseout="start();">
+        O O O O O O O O  
+   </marquee> 
+</div>
+</body>
+</html>

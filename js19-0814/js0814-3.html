@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myfrm">
+        <label for="username">姓名</label>
+        <input type="text" id="username">
+        <input type="submit">
+    </form>
+
+    <br>
+    <button id="delbtn">刪除姓名</button>
+    <script>
+        //取得表單
+        let myfrm=document.getElementById('myfrm');
+        myfrm.addEventListener('submit',function(e){
+            if(window.confirm('確定好了嗎？')){
+                let username= document.getElementById('username');
+                // 寫入時機：跨頁使用時再寫
+                // 寫入名字資料到localstorage
+
+                window.localStorage.setItem('username',username.value);
+
+                alert(username.value+'成功送出');
+            }else{
+                e.preventDefault();//取消預設行為（不執行表單action的動作）
+                alert('取消送出');
+            }
+        });
+    </script>
+</body>
+</html>

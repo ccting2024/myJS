@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 事件運作方式 -->
+    <!-- 方法一：程式敘述寫在標籤內的事件中 -->
+    onclick 是寫在標籤內的  click是監聽的寫法
+    <button onclick="alert('早安');">顯示訊息1</button>
+
+    <!-- 方法二：呼叫函式 -->
+    <button onclick="sayHi();">顯示訊息2</button>
+    <script>
+        function sayHi(){
+            alert(' 早安2');
+        }
+    </script>
+
+    <!-- 方法三：監聽函式事件 -->
+    <button id="btn1">顯示訊息3</button>
+    <script>
+        let btn1=document.getElementById('btn1');
+        btn1.addEventListener('click',function(){
+        aleert('早安3');
+        });
+    </script>
+
+    <!-- 方法四： -->
+
+
+</body>
+</html>

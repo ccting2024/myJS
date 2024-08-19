@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 事件基本語法 -->
+    <div 事件名稱="程式碼">標籤內容</div>
+    <button 事件名稱="程式碼">按鈕內容</button>
+
+    <div onclick="changeDiv();">按一下變更內容</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sapiente quod modi distinctio facere, laborum, deserunt at quibusdam nesciunt quas soluta placeat asperiores doloribus non aspernatur, magni provident? Ipsam harum veritatis quis ducimus hic velit, dolorem quisquam pariatur laborum fugit quas consequuntur voluptate laudantium, quidem totam iusto veniam quae aperiam?</p>
+    
+    
+    
+    <script>
+        function changeDiv(){
+            //變更網頁body內容
+           // document.body.innerHTML='Hello';
+            //變更段落內容
+            //document.querySelector('p').innerHTML='Hello';
+
+            
+            //只取得第一個段落
+            console.log(document.querySelector('p'));
+            //取得所有段落1
+            console.log(document.querySelectorAll('p'));
+            console.log(document.getElementsByClassName('p'));
+
+            //產生集合陣列物件
+            
+        }
+    </script>
+</body>
+</html>
